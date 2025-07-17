@@ -15,6 +15,7 @@
 ![Dark Mode](https://img.shields.io/badge/Dark--Mode-Available-111?style=for-the-badge&logo=halfbrickstudios&logoColor=white)
 [![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d16228bb-0dca-4a6d-b1a2-7bd055b885dd/deploy-status)](https://trivia-bot-fcc-jiro.netlify.app/)
 ![Status](https://img.shields.io/badge/status-complete-brightgreen)
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%204-blue)
 ![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.freecodecamp-js-trivia-bot&left_text=repo%20views)
@@ -83,7 +84,7 @@ The entire layout is semantically structured, accessibility-conscious, and inclu
 
 ## 🌐 Live Demo
 
-Or you can check out the 👉 [live website here](LINK)
+Or you can check out the 👉 [live website here](https://trivia-bot-fcc-jiro.netlify.app/)
 
 ---
 
@@ -100,10 +101,3 @@ Created by **Elmar Chavez**
 🗓️ Month/Year: **July 2025**
 
 📚 Journey: **4<sup>th</sup>** month of learning _frontend web development_.
-
-<!--
-
-FREECODECAMP TAGS:
-html css javascript vscode git github netlify 4th-month freecodecamp project lighthouse theme-toggle
-
--->
