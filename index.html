@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Trivia Bot</title>
+    <meta name="author" content="Elmar Chavez" />
+    <meta
+      name="description"
+      content="A simple JavaScript trivia bot using JavaScript variables and console log. Created as part of the freeCodeCamp JavaScript course lab challenges during the author's fourth month learning frontend web development."
+    />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+
+    <meta property="og:site_name" content="CodingWithJiro" />
+    <meta property="og:title" content="JS Trivia Bot" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="A simple trivia bot built with JavaScript variables and console log. Created for a freeCodeCamp lab challenge during the author's 4th month learning frontend web development."
+    />
+
+    <meta property="og:url" content="ADD_LINK_HERE" />
+
+    <meta
+      property="og:image"
+      content="ADD_LINK_HEREassets/img/site-preview-meta_1200x630.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JS Trivia Bot" />
+    <meta
+      name="twitter:description"
+      content="A simple trivia bot built with #JavaScript variables and console log. #freeCodeCamp #WebDev"
+    />
+
+    <meta
+      name="twitter:image"
+      content="ADD_LINK_HEREassets/img/site-preview-meta_1200x630.png"
+    />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#fdfdfd"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#181818"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="ADD_LINK_HERE" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="theme">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="theme__icon theme__icon--light"
+          aria-hidden="true"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <g clip-path="url(#a)" fill="currentColor">
+              <path
+                d="M12 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1ZM4.929 3.515a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 0 0 1.414-1.414L4.93 3.515ZM1 11a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2H1ZM18 12a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM17.657 16.243a1 1 0 0 0-1.414 1.414l2.828 2.828a1 1 0 1 0 1.414-1.414l-2.828-2.828ZM7.757 17.657a1 1 0 1 0-1.414-1.414L3.515 19.07a1 1 0 1 0 1.414 1.414l2.828-2.828ZM20.485 4.929a1 1 0 0 0-1.414-1.414l-2.828 2.828a1 1 0 1 0 1.414 1.414l2.828-2.828ZM13 19a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="a">
+                <path fill="#ffffff" d="M0 0h24v24H0z"></path>
+              </clipPath>
+            </defs>
+          </g>
+        </svg>
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="theme__icon theme__icon--dark hidden"
+          aria-hidden="true"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M9.272 2.406a1 1 0 0 0-1.23-1.355C6.59 1.535 5.432 2.487 4.37 3.55a11.399 11.399 0 0 0 0 16.182c4.518 4.519 11.51 4.261 15.976-.205 1.062-1.062 2.014-2.22 2.498-3.673A1 1 0 0 0 21.55 14.6c-3.59 1.322-7.675.734-10.434-2.025-2.765-2.766-3.328-6.83-1.844-10.168Z"
+              fill="currentColor"
+            ></path>
+          </g>
+        </svg>
+
+        <button
+          type="button"
+          aria-label="Toggle Light/Dark Mode"
+          class="theme__button"
+        ></button>
+      </div>
+
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 512 512"
+        xml:space="preserve"
+        fill="#000000"
+        class="header__background"
+        aria-hidden="true"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            class="header__bg-color1"
+            d="M256.002,90.32c-4.725,0-8.553-3.829-8.553-8.553V23.369c0-4.723,3.828-8.553,8.553-8.553 c4.725,0,8.553,3.829,8.553,8.553v58.398C264.555,86.49,260.727,90.32,256.002,90.32z"
+          ></path>
+          <rect
+            x="191.825"
+            y="208.645"
+            class="header__bg-color2"
+            width="128.351"
+            height="34.782"
+          ></rect>
+          <path
+            class="header__bg-color3"
+            d="M364.126,81.047v136.721h-43.951H191.825h-43.951V81.047c0-15.977,12.955-28.932,28.932-28.932h79.2 h79.189C351.182,52.116,364.126,65.071,364.126,81.047z"
+          ></path>
+          <path
+            class="header__bg-color4"
+            d="M196.192,52.116h-19.387c-15.977,0-28.932,12.955-28.932,28.932v136.721h19.387V81.047 C167.261,65.071,180.216,52.116,196.192,52.116z"
+          ></path>
+          <g>
+            <rect
+              x="171.606"
+              y="363.784"
+              class="header__bg-color5"
+              width="33.413"
+              height="121.303"
+            ></rect>
+            <rect
+              x="306.992"
+              y="363.784"
+              class="header__bg-color5"
+              width="33.402"
+              height="121.303"
+            ></rect>
+          </g>
+          <path
+            class="header__bg-color2"
+            d="M306.992,364.924v42.103h33.402v-42.103H306.992z M171.606,407.027h33.413v-42.103h-33.413V407.027z"
+          ></path>
+          <g>
+            <rect
+              x="348.799"
+              y="264.091"
+              class="header__bg-color5"
+              width="62.299"
+              height="35.17"
+            ></rect>
+            <rect
+              x="100.468"
+              y="264.091"
+              class="header__bg-color5"
+              width="63.166"
+              height="35.17"
+            ></rect>
+            <path
+              class="header__bg-color5"
+              d="M203.251,108.576c16.513,0,29.89,13.388,29.89,29.89c0,16.513-13.377,29.89-29.89,29.89 c-16.501,0-29.878-13.377-29.878-29.89C173.373,121.964,186.75,108.576,203.251,108.576z"
+            ></path>
+            <path
+              class="header__bg-color5"
+              d="M308.749,108.576c16.501,0,29.89,13.388,29.89,29.89c0,16.513-13.388,29.89-29.89,29.89 c-16.513,0-29.89-13.377-29.89-29.89C278.859,121.964,292.236,108.576,308.749,108.576z"
+            ></path>
+          </g>
+          <g>
+            <polygon
+              class="header__bg-color3"
+              points="224.36,471.562 224.36,512 152.265,512 152.265,471.562 171.606,471.562 205.019,471.562 "
+            ></polygon>
+            <polygon
+              class="header__bg-color3"
+              points="359.735,471.562 359.735,512 287.651,512 287.651,471.562 306.992,471.562 340.394,471.562 "
+            ></polygon>
+            <path
+              class="header__bg-color3"
+              d="M416.253,269.611v140.416h-31.885V299.261v-35.17v-26.366l0,0 C401.978,237.725,416.253,252.001,416.253,269.611z"
+            ></path>
+            <path
+              class="header__bg-color3"
+              d="M127.632,299.261v110.766H95.747V269.611c0-17.61,14.275-31.885,31.885-31.885l0,0v26.366V299.261z"
+            ></path>
+          </g>
+          <path
+            class="header__bg-color1"
+            d="M364.126,299.261v78.048h-23.731v-0.011h-33.402v0.011H205.019v-0.011h-33.413v0.011h-23.731v-78.048 v-35.17v-26.366h43.951h128.351h43.951v26.366L364.126,299.261L364.126,299.261z"
+          ></path>
+          <rect
+            x="147.874"
+            y="237.725"
+            class="header__bg-color6"
+            width="38.043"
+            height="139.572"
+          ></rect>
+          <g>
+            <path
+              class="header__bg-color7"
+              d="M241.698,138.467c0-21.196-17.245-38.441-38.441-38.441c-21.198,0-38.442,17.245-38.442,38.441 s17.245,38.441,38.442,38.441C224.453,176.908,241.698,159.663,241.698,138.467z M181.92,138.467 c0-11.764,9.572-21.336,21.337-21.336s21.336,9.571,21.336,21.336c0,11.764-9.571,21.336-21.336,21.336 S181.92,150.231,181.92,138.467z"
+            ></path>
+            <path
+              class="header__bg-color7"
+              d="M308.748,176.908c21.196,0,38.441-17.245,38.441-38.441s-17.245-38.441-38.441-38.441 c-21.198,0-38.442,17.245-38.442,38.441S287.55,176.908,308.748,176.908z M308.748,117.13c11.764,0,21.335,9.571,21.335,21.336 s-9.571,21.336-21.335,21.336s-21.337-9.571-21.337-21.336S296.983,117.13,308.748,117.13z"
+            ></path>
+            <circle
+              class="header__bg-color7"
+              cx="316.275"
+              cy="271.127"
+              r="8.553"
+            ></circle>
+            <circle
+              class="header__bg-color7"
+              cx="195.725"
+              cy="271.127"
+              r="8.553"
+            ></circle>
+          </g>
+          <circle
+            class="header__bg-color5"
+            cx="256.006"
+            cy="14.816"
+            r="14.816"
+          ></circle>
+          <path
+            class="header__bg-color2"
+            d="M303.469,330.906h-94.937c0-11.073,3.798-21.268,10.149-29.342 c8.701-11.039,22.181-18.132,37.325-18.132C282.223,283.432,303.469,304.689,303.469,330.906z"
+          ></path>
+          <path
+            class="header__bg-color5"
+            d="M294.813,330.906h-86.282c0-11.073,3.798-21.268,10.149-29.342 c8.074-6.352,18.258-10.149,29.342-10.149C271.515,291.415,291.027,308.486,294.813,330.906z"
+          ></path>
+        </g>
+      </svg>
+
+      <h1 class="header__title">JS Trivia Bot</h1>
+
+      <p class="header__description">
+        Open dev tools in your browser to see what <b>Echo</b> has to say
+      </p>
+    </header>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
