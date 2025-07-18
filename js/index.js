@@ -26,6 +26,24 @@ console.log(
     "."
 );
 
+// * EXTRA FREECODECAMP LAB SCRIPT (SENTENCE MAKER)
+let adjective = "big";
+let noun = "dragon";
+let verb = "sneezing";
+let place = "magical forest";
+let adjective2 = "large";
+let noun2 = "spicy Chinese food";
+let firstStory = `Once upon a time, there was a(n) ${adjective} ${noun} who loved to eat ${noun2}. The ${noun} lived in a ${place} and had ${adjective2} nostrils that blew fire when it was ${verb}.`;
+console.log(`First story: ${firstStory}`);
+adjective = "curious";
+noun = "gnome";
+verb = "sneezing";
+place = "mossy cottage";
+adjective2 = "glowing";
+noun2 = "berries";
+let secondStory = `Once upon a time, there was a(n) ${adjective} ${noun} who loved to eat ${noun2}. The ${noun} lived in a ${place} and had ${adjective2} nostrils that blew fire when it was ${verb}.`;
+console.log(`Second story: ${secondStory}`);
+
 // * THEME-TOGGLE SCRIPT
 function showIconLight() {
   const iconLight = document.querySelector(".theme__icon--light");
